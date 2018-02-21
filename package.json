@@ -1,0 +1,39 @@
+{
+  "name": "ncgraphql",
+  "version": "0.1.0",
+  "description": "Graphql access to NetCDF files, even in the browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "browserify index.js --standalone ncGraphQL | derequire > ncgraphql.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrishMarineInstitute/ncgraphql.js.git"
+  },
+  "keywords": [
+    "graphql",
+    "netcdf"
+  ],
+  "author": "Irish Marine Institute",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IrishMarineInstitute/ncgraphql.js/issues"
+  },
+  "homepage": "https://github.com/IrishMarineInstitute/ncgraphql.js#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-string": "^1.4.0",
+    "mocha": "^5.0.0",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "es6-promise": "^4.2.4",
+    "graphql": "^0.12.3",
+    "graphql-anywhere": "^4.1.1",
+    "graphql-tag": "^2.6.1",
+    "isomorphic-fetch": "^2.2.1",
+    "netcdfjs": "^0.3.1"
+  }
+
+}
