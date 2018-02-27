@@ -91,7 +91,7 @@
 			document.getElementById("result").innerText = "Running query...";
 			nc.query(query).then(function(result) {
 				document.getElementById("result").innerText = "Rendering result to page...";
-				if (fn) {
+				if (fn && typeof fn === "function") {
 					try {
 						fn(result);
 					} catch (e) {
