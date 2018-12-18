@@ -84,7 +84,7 @@ describe('ncGraphQL', function() {
 		})
 	})
 	describe('http netcdf file',function(){
-		var url = "https://github.com/cheminfo-js/netcdfjs/blob/master/test/files/ichthyop.nc?raw=true";
+		var url = "https://github.com/cheminfo-js/netcdfjs/blob/master/src/__tests__/files/ichthyop.nc?raw=true";
 		var ncgraphql;
     it('Should return a new ncGraphQL object', function() {
         ncgraphql = new ncGraphQL(url);
