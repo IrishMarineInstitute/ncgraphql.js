@@ -62,6 +62,21 @@ describe('ncGraphQL', function() {
 }`);
 				})
 		});
+		it('Should filter',function(){
+			return ncgraphql.query(`{
+  data: lat_lon_time(time: {min: "1939-01-01", max: "1939-02-01"}, sst: {min: 2.8, max: 2.891378164291382}){
+    lat
+    lon
+    time
+    sst
+  }
+}`).then(function(result){
+				 expect(result).to.exist;
+				 expect(result).to.have.own.property('data');
+				 expect(result.data.length).to.equal(3);
+
+});
+		});
 	});
 	describe('netcdf strings',function(){
 		var nc = fs.readFileSync("test/data/madis-sao.nc");
